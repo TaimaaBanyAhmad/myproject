@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bitwreckers | Taimaa's Pro Landing</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- مكتبة توليد الـ QR الحقيقي -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;900&family=Share+Tech+Mono&display=swap" rel="stylesheet">
+    
+    <style>
+        /* التنسيق الخاص باللوغو نضعه هنا أو في ملف style.css */
+        .team-logo-clean {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%; /* لجعل الصورة دائرية */
+            object-fit: cover;
+            border: 3px solid #b4008d; /* إطار أرجواني */
+            display: block;
+            margin: 0 auto 20px auto;
+            filter: drop-shadow(0 0 15px #e000b0);
+            animation: float 3s ease-in-out infinite;
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-10px); }
+        }
+        
+        .logo-wrapper {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+        }
+    </style>
+</head>
+<body class="cyber-space-theme">
+
+    <div class="screen active">
+        <div class="landing-hero">
+            <div class="logo-wrapper">
+                <!-- تأكدي أن ملف الصورة بجانب هذا الملف واسمه logo.jpg -->
+                <img src="logo.jpg" alt="Logo" class="team-logo-clean">
+            </div>
+            
+            <h1 class="game-title">BITWRECKERS</h1>
+            <p class="subtitle">⚡ CODE RUSH — LIVE QUIZ BATTLE</p>
+        </div>
+        
+        <div class="card hero-card-large">
+            <div class="qr-section">
+                <div id="qrcode"></div>
+                <p class="qr-label">Scan to join the battle</p>
+            </div>
+            
+            <div class="divider"></div>
+            
+            <div class="status-box">
+                <div class="player-count">
+                    <span class="live-dot"></span>
+                    <span>1 Player Connected</span>
+                </div>
+                <button class="btn-join">⚡ JOIN GAME</button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // توليد الـ QR الحقيقي
+        window.onload = function() {
+            new QRCode(document.getElementById("qrcode"), {
+                text: window.location.href,
+                width: 180,
+                height: 180,
+                colorDark : "#b4008d",
+                colorLight : "#ffffff",
+                correctLevel : QRCode.CorrectLevel.H
+            });
+        };
+    </script>
+</body>
+</html>

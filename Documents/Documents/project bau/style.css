@@ -1,0 +1,119 @@
+:root {
+    --bg-main: #050816;         /* الخلفية الأساسية */
+    --surface-card: #131A3A;    /* المستطيل/البطاقة */
+    --cyan-glow: #6EE7FF;       /* التوهج السماوي */
+    --purple: #8B5CF6;          /* الأرجواني */
+    --text-primary: #E6ECFF;    /* لون النص */
+    --error: #EF4444;           /* تنبيهات */
+}
+
+body {
+    background-color: var(--bg-main);
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    font-family: 'Orbitron', sans-serif;
+    color: var(--text-primary);
+}
+
+.screen {
+    width: 90%;
+    max-width: 450px;
+    text-align: center;
+}
+
+/* اللوغو الدائري */
+.team-logo {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid var(--cyan-glow);
+    margin-bottom: 15px;
+    filter: drop-shadow(0 0 10px var(--cyan-glow));
+}
+
+.game-title {
+    font-size: 2.5rem;
+    margin: 0;
+    color: var(--text-primary);
+    text-shadow: 0 0 15px var(--cyan-glow);
+}
+
+.subtitle {
+    color: var(--purple);
+    font-size: 0.8rem;
+    letter-spacing: 2px;
+}
+
+/* تصميم المستطيل حسب الصورة والألوان الجديدة */
+.hero-card {
+    background: var(--surface-card);
+    border: 1px solid rgba(110, 231, 255, 0.2);
+    border-radius: 15px;
+    padding: 30px 20px;
+    margin-top: 20px;
+    box-shadow: 0 0 25px rgba(34, 211, 238, 0.1);
+}
+
+#qrcode {
+    background: white;
+    padding: 10px;
+    border-radius: 8px;
+    display: inline-block;
+}
+
+.qr-label {
+    font-family: 'Share Tech Mono', monospace;
+    margin-top: 10px;
+    opacity: 0.8;
+}
+
+.divider {
+    height: 1px;
+    background: rgba(110, 231, 255, 0.1);
+    margin: 20px 0;
+}
+
+/* جزء عدد اللاعبين */
+.player-count {
+    background: rgba(0, 0, 0, 0.2);
+    border: 1px solid var(--purple);
+    padding: 8px 20px;
+    border-radius: 20px;
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 0.8rem;
+}
+
+.live-dot {
+    width: 8px;
+    height: 8px;
+    background: #00ff88;
+    border-radius: 50%;
+    box-shadow: 0 0 10px #00ff88;
+}
+
+/* زر Join Game باستخدام الأرجواني المختار */
+.btn-join {
+    width: 100%;
+    background: var(--purple);
+    color: white;
+    border: none;
+    padding: 15px;
+    border-radius: 10px;
+    font-family: 'Orbitron', sans-serif;
+    font-weight: bold;
+    margin-top: 15px;
+    cursor: pointer;
+    box-shadow: 0 0 15px var(--purple);
+    transition: 0.3s;
+}
+
+.btn-join:hover {
+    background: #a78bfa; /* تفتيح بسيط عند الـ Hover */
+    transform: scale(1.02);
+}
